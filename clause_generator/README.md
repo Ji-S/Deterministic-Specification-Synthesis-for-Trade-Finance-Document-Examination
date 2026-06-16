@@ -137,6 +137,8 @@ When generating GT, the following reference variables are used:
 
 
 ## Supplementary Table: Template library composition
+
+```
 ─────────────────────────────────────────────────
 Document  Section            #templates
 BL        ORIGINALS              6 (4 + 2(original pattern))
@@ -175,3 +177,4 @@ IV    INV_NUM_ONLY_EXPLICIT              3
 IV    HS_CODE                            3       
 ──────────────────────────────────────────────────────────────
 IV subtotal                            56
+```
