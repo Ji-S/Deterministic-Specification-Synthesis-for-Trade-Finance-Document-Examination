@@ -4,7 +4,7 @@ This repository contains:
 - ✅ Synthesis pipeline code (`clause_generator/`)
 - ✅ Inference code
 - ✅ Evaluation prompts
-- ✅ Dummy data samples (`dataset/BL/dummy_*.json`, `dataset/IV/dummy_*.json`)
+- ✅ Dummy data samples (`dataset/generated/BL/dummy_*.json`, `dataset/generated/IV/dummy_*.json`)
 
 This repository does NOT contain:
 - ❌ Re-processed AI Hub source documents (per AI Hub redistribution policy)
