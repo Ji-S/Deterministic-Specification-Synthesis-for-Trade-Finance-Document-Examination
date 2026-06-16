@@ -1,0 +1,26 @@
+{
+  "im_path": "./dummy_02_BL.jpg",
+  "generated_clause": "ONE (1) B/L\nNOTIFY SAME AS CONSIGNEE\nMARKED 'FREIGHT PREPAID'\nMADE OUT TO ORDER OF ISSUING BANK",
+  "GT": [
+    {
+      "key": "number_of_documents",
+      "expected_value": "ONE (1)",
+      "operator": "GTE"
+    },
+    {
+      "key": "consignee",
+      "expected_value": "$LC_ISSUING_BANK",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "notify_party",
+      "expected_value": "SAME AS CONSIGNEE",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "freight_terms",
+      "expected_value": "FREIGHT PREPAID",
+      "operator": "CONTAINS"
+    }
+  ]
+}

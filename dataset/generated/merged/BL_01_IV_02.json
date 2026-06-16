@@ -1,0 +1,75 @@
+{
+  "im_path": [
+    "./dummy_01_BL.jpg",
+    "./dummy_02_IV.jpg"
+  ],
+  "generated_clause": "++ 2/2 ORIGINAL BILLS OF LADING\nMADE OUT TO ABC CO., LTD.\nMARKED FREIGHT PREPAID\nXYZ TRADING CO., LTD. 123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES TO BE NOTIFIED\nDATE OF ISSUANCE NOT LATER THAN 2008-11-06 ++ COMMERCIAL INVOICE DATED AND PREPARED BY BENEFICIARY AND SHOWING ORIGIN AS KOREA AND INDICATING TOTAL VALUE USD 5342.86",
+  "GT": [
+    {
+      "doc": "BL",
+      "key": "number_of_documents",
+      "expected_value": "2/2",
+      "operator": "GTE"
+    },
+    {
+      "doc": "BL",
+      "key": "consignee",
+      "expected_value": "ABC CO., LTD.",
+      "operator": "EQUALS"
+    },
+    {
+      "doc": "BL",
+      "key": "notify_party",
+      "expected_value": "XYZ TRADING CO., LTD.",
+      "operator": "EQUALS"
+    },
+    {
+      "doc": "BL",
+      "key": "notify_party_address",
+      "expected_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+      "operator": "CONTAINS"
+    },
+    {
+      "doc": "BL",
+      "key": "freight_terms",
+      "expected_value": "FREIGHT PREPAID",
+      "operator": "CONTAINS"
+    },
+    {
+      "doc": "BL",
+      "key": "date_of_issue",
+      "expected_value": "2008-11-06",
+      "operator": "LTE"
+    },
+    {
+      "doc": "IV",
+      "key": "exist_invoice_date",
+      "expected_value": true,
+      "operator": "EXISTS"
+    },
+    {
+      "doc": "IV",
+      "key": "exporter",
+      "expected_value": "$LC_BENEFICIARY",
+      "operator": "EQUALS"
+    },
+    {
+      "doc": "IV",
+      "key": "country_of_origin",
+      "expected_value": "KOREA",
+      "operator": "EQUALS"
+    },
+    {
+      "doc": "IV",
+      "key": "currency",
+      "expected_value": "USD",
+      "operator": "EQUALS"
+    },
+    {
+      "doc": "IV",
+      "key": "total_amount",
+      "expected_value": "5342.86",
+      "operator": "LTE"
+    }
+  ]
+}

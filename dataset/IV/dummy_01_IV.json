@@ -1,0 +1,54 @@
+{
+  "im_path": "./dummy_01_IV.jpg",
+  "full_iv_extraction": {
+    "number_of_documents": "",
+    "exporter": "ABC Textile Co., Ltd. 123-45, Sangam-dong, Seoul, Rep. of Korea TEL+(82)(2)1234-5678 FAX+(82)(2)8765-4321",
+    "buyer": "",
+    "consignee": "XYZ Global Trading Co., Ltd. 100-200, Warsaw, Polna 50, 00001, Poland TEL+(48)(22)123-4567 FAX+(48)(22)987-6543",
+    "invoice_number": "INV-2005-001",
+    "invoice_date": "2005-08-29",
+    "lc_number": "",
+    "currency": "USD",
+    "total_amount": "4625.35",
+    "country_of_origin": "Korea",
+    "trade_terms": "FOB",
+    "goods_description": [
+      {
+        "HS_code": "6109.90",
+        "Descriptions_of_goods": "Cotton T-Shirt",
+        "Quantity": "1000 PCS",
+        "unit_price": "USD 5.00",
+        "amount": "USD 5000.00"
+      },
+      {
+        "HS_code": "6203.42",
+        "Descriptions_of_goods": "Cotton Pants",
+        "Quantity": "500 PCS",
+        "unit_price": "USD 8.00",
+        "amount": "USD 4000.00"
+      },
+      {
+        "HS_code": "6115.95",
+        "Descriptions_of_goods": "Cotton Socks",
+        "Quantity": "2000 PCS",
+        "unit_price": "USD 1.50",
+        "amount": "USD 3000.00"
+      }
+    ]
+  },
+  "exporter": {
+    "name": "ABC Textile Co., Ltd.",
+    "address": "123-45, Sangam-dong, Seoul, Rep. of Korea",
+    "tel_fax": "TEL+(82)(2)1234-5678 FAX+(82)(2)8765-4321"
+  },
+  "buyer": {
+    "name": "",
+    "address": "",
+    "tel_fax": ""
+  },
+  "consignee": {
+    "name": "XYZ Global Trading Co., Ltd.",
+    "address": "100-200, Warsaw, Polna 50, 00001, Poland",
+    "tel_fax": "TEL+(48)(22)123-4567 FAX+(48)(22)987-6543"
+  }
+}

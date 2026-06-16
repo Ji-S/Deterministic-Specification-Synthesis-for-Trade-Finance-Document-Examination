@@ -1,0 +1,29 @@
+{
+  "im_path": "./dummy_02_BL.jpg",
+  "full_bl_extraction": {
+    "number_of_documents": "ONE (1)",
+    "consignee": "DEF INDUSTRIES CO., LTD. NO. 741, INDUSTRIAL PARK, SHENZHEN CITY, GUANGDONG, CHINA 518000 TEL:+(86)(75)5555-1234 FAX:+(86)(75)5555-5678",
+    "notify_party": "SAME AS CONSIGNEE",
+    "freight_terms": "FREIGHT PREPAID",
+    "clean_wording": false,
+    "adverse_remarks": null,
+    "on_board_notation": "LADEN ON BOARD",
+    "on_board_date": "2016-10-16",
+    "port_of_loading": "OSAKA, JAPAN",
+    "port_of_discharge": "PIRAEUS, GREECE",
+    "place_of_delivery": "",
+    "final_destination": "HAIFA, ISRAEL",
+    "signed": "JKL SHIPPING CO., LTD.",
+    "date_of_issue": "2001-09-26"
+  },
+  "consignee": {
+    "name": "DEF INDUSTRIES CO., LTD.",
+    "address": "NO. 741, INDUSTRIAL PARK, SHENZHEN CITY, GUANGDONG, CHINA 518000",
+    "tel_fax": "TEL:+(86)(75)5555-1234 FAX:+(86)(75)5555-5678"
+  },
+  "notify_party": {
+    "name": "",
+    "address": "",
+    "tel_fax": ""
+  }
+}

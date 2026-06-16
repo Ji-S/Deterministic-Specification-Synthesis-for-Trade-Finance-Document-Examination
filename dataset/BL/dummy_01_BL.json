@@ -1,0 +1,29 @@
+{
+  "im_path": "./dummy_01_BL.jpg",
+  "full_bl_extraction": {
+    "number_of_documents": "2/2",
+    "consignee": "ABC CO., LTD. 000-00, GYEONGGI, REP. OF KOREA TEL:+(00)(00)1234-5678 FAX:+(00)(00)9876-5432",
+    "notify_party": "XYZ TRADING CO., LTD. 123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES TEL:+(13)(24)2622-3179 FAX:+(23)(91)3473-3194",
+    "freight_terms": "FREIGHT PREPAID",
+    "clean_wording": false,
+    "adverse_remarks": null,
+    "on_board_notation": "",
+    "on_board_date": "",
+    "port_of_loading": "TOKYO, JAPAN",
+    "port_of_discharge": "LOS ANGELES, UNITED STATES",
+    "place_of_delivery": "CHICAGO, UNITED STATES",
+    "final_destination": "",
+    "signed": "GLOBAL LOGISTICS CO., LTD.",
+    "date_of_issue": "2008-11-06"
+  },
+  "consignee": {
+    "name": "ABC CO., LTD.",
+    "address": "000-00, GYEONGGI, REP. OF KOREA",
+    "tel_fax": "TEL:+(00)(00)1234-5678 FAX:+(00)(00)9876-5432"
+  },
+  "notify_party": {
+    "name": "XYZ TRADING CO., LTD.",
+    "address": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+    "tel_fax": "TEL:+(13)(24)2622-3179 FAX:+(23)(91)3473-3194"
+  }
+}

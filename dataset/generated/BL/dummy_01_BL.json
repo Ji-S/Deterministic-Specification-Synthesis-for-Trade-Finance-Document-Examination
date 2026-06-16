@@ -1,0 +1,36 @@
+{
+  "im_path": "./dummy_01_BL.jpg",
+  "generated_clause": "2/2 ORIGINAL BILLS OF LADING\nMADE OUT TO ABC CO., LTD.\nMARKED FREIGHT PREPAID\nXYZ TRADING CO., LTD. 123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES TO BE NOTIFIED\nDATE OF ISSUANCE NOT LATER THAN 2008-11-06",
+  "GT": [
+    {
+      "key": "number_of_documents",
+      "expected_value": "2/2",
+      "operator": "GTE"
+    },
+    {
+      "key": "consignee",
+      "expected_value": "ABC CO., LTD.",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "notify_party",
+      "expected_value": "XYZ TRADING CO., LTD.",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "notify_party_address",
+      "expected_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+      "operator": "CONTAINS"
+    },
+    {
+      "key": "freight_terms",
+      "expected_value": "FREIGHT PREPAID",
+      "operator": "CONTAINS"
+    },
+    {
+      "key": "date_of_issue",
+      "expected_value": "2008-11-06",
+      "operator": "LTE"
+    }
+  ]
+}

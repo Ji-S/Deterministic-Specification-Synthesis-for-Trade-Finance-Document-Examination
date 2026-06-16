@@ -1,0 +1,31 @@
+{
+  "im_path": "./dummy_02_IV.jpg",
+  "generated_clause": "COMMERCIAL INVOICE DATED AND PREPARED BY BENEFICIARY AND SHOWING ORIGIN AS KOREA AND INDICATING TOTAL VALUE USD 5342.86",
+  "GT": [
+    {
+      "key": "exist_invoice_date",
+      "expected_value": true,
+      "operator": "EXISTS"
+    },
+    {
+      "key": "exporter",
+      "expected_value": "$LC_BENEFICIARY",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "country_of_origin",
+      "expected_value": "KOREA",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "currency",
+      "expected_value": "USD",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "total_amount",
+      "expected_value": "5342.86",
+      "operator": "LTE"
+    }
+  ]
+}

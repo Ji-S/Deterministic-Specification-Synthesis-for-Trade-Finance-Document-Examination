@@ -1,0 +1,40 @@
+{
+  "im_path": "./dummy_02_IV.jpg",
+  "full_iv_extraction": {
+    "number_of_documents": "",
+    "exporter": "DEF Logistics Co., Ltd. 456-78, Nampo-dong, Jung-gu, Busan, Rep. of Korea TEL+(82)(51)234-5678 FAX+(82)(51)876-5432",
+    "buyer": "",
+    "consignee": "GHI International Trading Co., Ltd. 789 Harbor Road, Auckland, 1010, New Zealand TEL+(64)(9)123-4567 FAX+(64)(9)987-6543",
+    "invoice_number": "INV-2017-002",
+    "invoice_date": "2017-05-20",
+    "lc_number": "LC-000-000",
+    "currency": "USD",
+    "total_amount": "5342.86",
+    "country_of_origin": "Korea",
+    "trade_terms": "CIF",
+    "goods_description": [
+      {
+        "HS_code": "8483.40",
+        "Descriptions_of_goods": "Gear Motor Assembly",
+        "Quantity": "100 PCS",
+        "unit_price": "USD 50.00",
+        "amount": "USD 5000.00"
+      }
+    ]
+  },
+  "exporter": {
+    "name": "DEF Logistics Co., Ltd.",
+    "address": "456-78, Nampo-dong, Jung-gu, Busan, Rep. of Korea",
+    "tel_fax": "TEL+(82)(51)234-5678 FAX+(82)(51)876-5432"
+  },
+  "buyer": {
+    "name": "",
+    "address": "",
+    "tel_fax": ""
+  },
+  "consignee": {
+    "name": "GHI International Trading Co., Ltd.",
+    "address": "789 Harbor Road, Auckland, 1010, New Zealand",
+    "tel_fax": "TEL+(64)(9)123-4567 FAX+(64)(9)987-6543"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "im_path": "./dummy_01_IV.jpg",
+  "generated_clause": "COMMERCIAL INVOICE DATED AND ISSUED BY ABC TEXTILE CO., LTD. AND SHOWING INVOICE NUMBER INV-2005-001 AND SHOWING COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS AND INDICATING H.S. CODE 6109.90, 6203.42, 6115.95 AND INDICATING TOTAL VALUE USD 4625.35",
+  "GT": [
+    {
+      "key": "exist_invoice_date",
+      "expected_value": true,
+      "operator": "EXISTS"
+    },
+    {
+      "key": "exporter",
+      "expected_value": "ABC TEXTILE CO., LTD.",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "invoice_number",
+      "expected_value": "INV-2005-001",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "goods_description",
+      "expected_value": "COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS",
+      "operator": "CONTAINS"
+    },
+    {
+      "key": "hs_code",
+      "expected_value": "6109.90, 6203.42, 6115.95",
+      "operator": "CONTAINS"
+    },
+    {
+      "key": "currency",
+      "expected_value": "USD",
+      "operator": "EQUALS"
+    },
+    {
+      "key": "total_amount",
+      "expected_value": "4625.35",
+      "operator": "LTE"
+    }
+  ]
+}
