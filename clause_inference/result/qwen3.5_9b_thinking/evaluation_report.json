@@ -1,0 +1,325 @@
+{
+  "evaluations": [
+    {
+      "file_path": "../dataset/generated/merged/BL_01_NV_02.json",
+      "im_path": [
+        "./dummy_01_BL.jpg",
+        "./dummy_02_IV.jpg"
+      ],
+      "generated_clause": "++ 2/2 ORIGINAL BILLS OF LADING\nMADE OUT TO ABC CO., LTD.\nMARKED FREIGHT PREPAID\nXYZ TRADING CO., LTD. 123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES TO BE NOTIFIED\nDATE OF ISSUANCE NOT LATER THAN 2008-11-06 ++ COMMERCIAL INVOICE DATED AND PREPARED BY BENEFICIARY AND SHOWING ORIGIN AS KOREA AND INDICATING TOTAL VALUE USD 5342.86",
+      "metrics": {
+        "total_gt": 11,
+        "matched": 11,
+        "mismatched": 0,
+        "missing": 0,
+        "extra": 1,
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1": 0.9565217391304348
+      },
+      "matches": [
+        {
+          "key": "number_of_documents",
+          "gt_value": "2/2",
+          "inf_value": "2/2",
+          "gt_operator": "GTE",
+          "inf_operator": "GTE"
+        },
+        {
+          "key": "consignee",
+          "gt_value": "ABC CO., LTD.",
+          "inf_value": "ABC CO., LTD.",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "notify_party",
+          "gt_value": "XYZ TRADING CO., LTD.",
+          "inf_value": "XYZ TRADING CO., LTD.",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "notify_party_address",
+          "gt_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+          "inf_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+          "gt_operator": "CONTAINS",
+          "inf_operator": "CONTAINS"
+        },
+        {
+          "key": "freight_terms",
+          "gt_value": "FREIGHT PREPAID",
+          "inf_value": "FREIGHT PREPAID",
+          "gt_operator": "CONTAINS",
+          "inf_operator": "CONTAINS"
+        },
+        {
+          "key": "date_of_issue",
+          "gt_value": "2008-11-06",
+          "inf_value": "2008-11-06",
+          "gt_operator": "LTE",
+          "inf_operator": "LTE"
+        },
+        {
+          "key": "exist_invoice_date",
+          "gt_value": true,
+          "inf_value": true,
+          "gt_operator": "EXISTS",
+          "inf_operator": "EXISTS"
+        },
+        {
+          "key": "exporter",
+          "gt_value": "$LC_BENEFICIARY",
+          "inf_value": "$LC_BENEFICIARY",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "country_of_origin",
+          "gt_value": "KOREA",
+          "inf_value": "KOREA",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "currency",
+          "gt_value": "USD",
+          "inf_value": "USD",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "total_amount",
+          "gt_value": "5342.86",
+          "inf_value": "5342.86",
+          "gt_operator": "LTE",
+          "inf_operator": "LTE"
+        }
+      ],
+      "mismatches": [],
+      "missing": [],
+      "extra": [
+        {
+          "key": "adverse_remarks",
+          "inf_value": null,
+          "operator": "NEGATION"
+        }
+      ]
+    },
+    {
+      "file_path": "../dataset/generated/merged/BL_02_NV_01.json",
+      "im_path": [
+        "./dummy_02_BL.jpg",
+        "./dummy_01_IV.jpg"
+      ],
+      "generated_clause": "++ ONE (1) B/L\nNOTIFY SAME AS CONSIGNEE\nMARKED 'FREIGHT PREPAID'\nMADE OUT TO ORDER OF ISSUING BANK ++ COMMERCIAL INVOICE DATED AND ISSUED BY ABC TEXTILE CO., LTD. AND SHOWING INVOICE NUMBER INV-2005-001 AND SHOWING COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS AND INDICATING H.S. CODE 6109.90, 6203.42, 6115.95 AND INDICATING TOTAL VALUE USD 4625.35",
+      "metrics": {
+        "total_gt": 11,
+        "matched": 11,
+        "mismatched": 0,
+        "missing": 0,
+        "extra": 1,
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1": 0.9565217391304348
+      },
+      "matches": [
+        {
+          "key": "number_of_documents",
+          "gt_value": "ONE (1)",
+          "inf_value": "ONE (1)",
+          "gt_operator": "GTE",
+          "inf_operator": "GTE"
+        },
+        {
+          "key": "consignee",
+          "gt_value": "$LC_ISSUING_BANK",
+          "inf_value": "$LC_ISSUING_BANK",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "notify_party",
+          "gt_value": "SAME AS CONSIGNEE",
+          "inf_value": "SAME AS CONSIGNEE",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "freight_terms",
+          "gt_value": "FREIGHT PREPAID",
+          "inf_value": "FREIGHT PREPAID",
+          "gt_operator": "CONTAINS",
+          "inf_operator": "CONTAINS"
+        },
+        {
+          "key": "exist_invoice_date",
+          "gt_value": true,
+          "inf_value": true,
+          "gt_operator": "EXISTS",
+          "inf_operator": "EXISTS"
+        },
+        {
+          "key": "exporter",
+          "gt_value": "ABC TEXTILE CO., LTD.",
+          "inf_value": "ABC TEXTILE CO., LTD.",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "invoice_number",
+          "gt_value": "INV-2005-001",
+          "inf_value": "INV-2005-001",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "goods_description",
+          "gt_value": "COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS",
+          "inf_value": "COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS",
+          "gt_operator": "CONTAINS",
+          "inf_operator": "CONTAINS"
+        },
+        {
+          "key": "hs_code",
+          "gt_value": "6109.90, 6203.42, 6115.95",
+          "inf_value": "6109.90, 6203.42, 6115.95",
+          "gt_operator": "CONTAINS",
+          "inf_operator": "CONTAINS"
+        },
+        {
+          "key": "currency",
+          "gt_value": "USD",
+          "inf_value": "USD",
+          "gt_operator": "EQUALS",
+          "inf_operator": "EQUALS"
+        },
+        {
+          "key": "total_amount",
+          "gt_value": "4625.35",
+          "inf_value": "4625.35",
+          "gt_operator": "LTE",
+          "inf_operator": "LTE"
+        }
+      ],
+      "mismatches": [],
+      "missing": [],
+      "extra": [
+        {
+          "key": "exist_invoice_number",
+          "inf_value": true,
+          "operator": "EXISTS"
+        }
+      ]
+    }
+  ],
+  "total_metrics": {
+    "total_files": 2,
+    "total_gt_fields": 22,
+    "total_matched": 22,
+    "total_mismatched": 0,
+    "total_missing": 0,
+    "total_extra": 2,
+    "overall_precision": 0.9166666666666666,
+    "overall_recall": 1.0,
+    "overall_f1": 0.9565217391304348
+  },
+  "key_statistics": {
+    "number_of_documents": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "consignee": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "notify_party": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "notify_party_address": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "freight_terms": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "date_of_issue": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "exist_invoice_date": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "exporter": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "country_of_origin": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "currency": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "total_amount": {
+      "matched": 2,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "adverse_remarks": {
+      "matched": 0,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 1
+    },
+    "invoice_number": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "goods_description": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "hs_code": {
+      "matched": 1,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 0
+    },
+    "exist_invoice_number": {
+      "matched": 0,
+      "mismatched": 0,
+      "missing": 0,
+      "extra": 1
+    }
+  }
+}

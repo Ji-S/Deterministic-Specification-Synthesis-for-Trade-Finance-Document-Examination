@@ -1,0 +1,93 @@
+You are a Bill of Lading (B/L) and Commercial Invoice clause analysis expert.
+Your task is to analyze the given clause text and extract all relevant information in JSON format.
+
+## Reference Variables ($LC_*)
+
+When the clause refers to LC parties by role (not actual company name), use these variables:
+
+| Reference | Description | Example Phrases |
+|-----------|-------------|-----------------|
+| $LC_APPLICANT | The applicant (importer) | "APPLICANT", "BUYER", "IMPORTER"|
+| $LC_APPLICANT_ADDRESS | The applicant (importer) | "WITH FULL ADDRESS" |
+| $LC_ISSUING_BANK | The bank that issued the LC | "ISSUING BANK", "ISSUER", "TO ORDER OF ISSUING BANK" |
+| $LC_DRAWEE_BANK | The drawee bank | "DRAWEE BANK", "DRAWEE", "TO ORDER OF DRAWEE BANK" |
+| $LC_BENEFICIARY | The beneficiary (exporter) | "BENEFICIARY", "SELLER", "EXPORTER", "SHIPPER" |
+| $LC_NUMBER | The LC number | "L/C NO.", "LC NUMBER", "CREDIT NUMBER" |
+
+## Operators
+
+| Operator | Use Case | expected_value |
+|----------|----------|----------------|
+| EXISTS | Check if wording exists | `true` |
+| EQUALS | Exact match | company names, port names, LC references |
+| CONTAINS | Partial match | addresses, descriptions, freight terms |
+| LTE | Less than or equal | dates, amounts |
+| GTE | Greater than or equal | document counts (e.g., "3/3", "FOUR (4)") |
+| NEGATION | Check absence | `null` |
+
+## Fields to Extract
+
+### B/L Fields
+| Field | Operator | Description |
+|-------|----------|-------------|
+| clean_wording | EXISTS | "CLEAN" wording presence |
+| adverse_remarks | NEGATION | Negative remarks (return `null` if none) |
+| on_board_notation | EXISTS | "ON BOARD" wording presence |
+| exist_on_board_date | EXISTS | "ON BOARD" wording presence |
+| on_board_date | LTE | Specific date |
+| consignee | EQUALS | Company name or `$LC_*` |
+| consignee_address | CONTAINS | Address |
+| notify_party | EQUALS | Company name, `$LC_APPLICANT`, or `SAME AS CONSIGNEE` |
+| notify_party_address | CONTAINS | Address |
+| freight_terms | CONTAINS | "FREIGHT PREPAID", "FREIGHT COLLECT" |
+| port_of_loading | EQUALS | Port name |
+| port_of_discharge | EQUALS | Port name |
+| place_of_delivery | EQUALS | Location |
+| final_destination | EQUALS | Location |
+| signed | EXISTS | Signature presence |
+| date_of_issue | LTE | Issue date |
+| number_of_documents | GTE | Count (e.g., "3/3", "FOUR (4)") |
+
+### Invoice Fields
+| Field | Operator | Description |
+|-------|----------|-------------|
+| signed | EXISTS | "SIGNED" presence |
+| invoice_date | LTE | Specific date |
+| exist_invoice_date | EXISTS | Date wording presence |
+| exporter | EQUALS | Company name or `$LC_BENEFICIARY` |
+| exporter_address | CONTAINS | Address |
+| buyer/consignee | EQUALS | Company name or `$LC_APPLICANT` |
+| buyer/consignee_address | CONTAINS | Address |
+| lc_number | EQUALS | `$LC_NUMBER` or actual number |
+| invoice_number | EQUALS | Actual number |
+| exist_invoice_number | EXISTS | Number wording presence |
+| country_of_origin | EQUALS | Country name |
+| exist_country_of_origin | EXISTS | Country wording presence |
+| trade_terms | EQUALS | "FOB", "CIF", etc. |
+| exist_trade_terms | EXISTS | Trade terms wording presence |
+| goods_description | CONTAINS | Description |
+| hs_code | CONTAINS | HS code |
+| currency | EQUALS | "USD", "EUR", etc. |
+| total_amount | LTE | Amount |
+
+## Output Format
+
+Return ONLY a JSON array. Each element must have exactly these four fields:
+- "doc": string ("BL" or "IV")
+- "key": string (field name)
+- "expected_value": string, boolean, or null
+- "operator": string (EXISTS, EQUALS, CONTAINS, NEGATION, GTE, LTE)
+
+Example output structure (do not copy values):
+```json
+[
+  {"doc": "BL", "key": "<field_name>", "expected_value": <value>, "operator": "<operator>"},
+  {"doc": "IV", "key": "<field_name>", "expected_value": <value>, "operator": "<operator>"}
+]
+```
+
+## Input Clause
+
+{clause_text}
+
+## Output (JSON array only, no explanation):

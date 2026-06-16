@@ -1,0 +1,308 @@
+[
+  {
+    "file_path": "../dataset/generated/merged/BL_01_NV_02.json",
+    "im_path": [
+      "./dummy_01_BL.jpg",
+      "./dummy_02_IV.jpg"
+    ],
+    "generated_clause": "++ 2/2 ORIGINAL BILLS OF LADING\nMADE OUT TO ABC CO., LTD.\nMARKED FREIGHT PREPAID\nXYZ TRADING CO., LTD. 123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES TO BE NOTIFIED\nDATE OF ISSUANCE NOT LATER THAN 2008-11-06 ++ COMMERCIAL INVOICE DATED AND PREPARED BY BENEFICIARY AND SHOWING ORIGIN AS KOREA AND INDICATING TOTAL VALUE USD 5342.86",
+    "GT": [
+      {
+        "doc": "BL",
+        "key": "number_of_documents",
+        "expected_value": "2/2",
+        "operator": "GTE"
+      },
+      {
+        "doc": "BL",
+        "key": "consignee",
+        "expected_value": "ABC CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party",
+        "expected_value": "XYZ TRADING CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party_address",
+        "expected_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "BL",
+        "key": "freight_terms",
+        "expected_value": "FREIGHT PREPAID",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "BL",
+        "key": "date_of_issue",
+        "expected_value": "2008-11-06",
+        "operator": "LTE"
+      },
+      {
+        "doc": "IV",
+        "key": "exist_invoice_date",
+        "expected_value": true,
+        "operator": "EXISTS"
+      },
+      {
+        "doc": "IV",
+        "key": "exporter",
+        "expected_value": "$LC_BENEFICIARY",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "country_of_origin",
+        "expected_value": "KOREA",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "currency",
+        "expected_value": "USD",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "total_amount",
+        "expected_value": "5342.86",
+        "operator": "LTE"
+      }
+    ],
+    "inference_result": [
+      {
+        "doc": "BL",
+        "key": "number_of_documents",
+        "expected_value": "2/2",
+        "operator": "GTE"
+      },
+      {
+        "doc": "BL",
+        "key": "consignee",
+        "expected_value": "ABC CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "freight_terms",
+        "expected_value": "FREIGHT PREPAID",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party",
+        "expected_value": "XYZ TRADING CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party_address",
+        "expected_value": "123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "BL",
+        "key": "date_of_issue",
+        "expected_value": "2008-11-06",
+        "operator": "LTE"
+      },
+      {
+        "doc": "BL",
+        "key": "adverse_remarks",
+        "expected_value": null,
+        "operator": "NEGATION"
+      },
+      {
+        "doc": "IV",
+        "key": "exporter",
+        "expected_value": "$LC_BENEFICIARY",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "exist_invoice_date",
+        "expected_value": true,
+        "operator": "EXISTS"
+      },
+      {
+        "doc": "IV",
+        "key": "country_of_origin",
+        "expected_value": "KOREA",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "total_amount",
+        "expected_value": "5342.86",
+        "operator": "LTE"
+      },
+      {
+        "doc": "IV",
+        "key": "currency",
+        "expected_value": "USD",
+        "operator": "EQUALS"
+      }
+    ],
+    "raw_response": "\n\n[\n  {\n    \"doc\": \"BL\",\n    \"key\": \"number_of_documents\",\n    \"expected_value\": \"2/2\",\n    \"operator\": \"GTE\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"consignee\",\n    \"expected_value\": \"ABC CO., LTD.\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"freight_terms\",\n    \"expected_value\": \"FREIGHT PREPAID\",\n    \"operator\": \"CONTAINS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"notify_party\",\n    \"expected_value\": \"XYZ TRADING CO., LTD.\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"notify_party_address\",\n    \"expected_value\": \"123 MAIN STREET, NEW YORK, NY 10001, UNITED STATES\",\n    \"operator\": \"CONTAINS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"date_of_issue\",\n    \"expected_value\": \"2008-11-06\",\n    \"operator\": \"LTE\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"adverse_remarks\",\n    \"expected_value\": null,\n    \"operator\": \"NEGATION\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"exporter\",\n    \"expected_value\": \"$LC_BENEFICIARY\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"exist_invoice_date\",\n    \"expected_value\": true,\n    \"operator\": \"EXISTS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"country_of_origin\",\n    \"expected_value\": \"KOREA\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"total_amount\",\n    \"expected_value\": \"5342.86\",\n    \"operator\": \"LTE\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"currency\",\n    \"expected_value\": \"USD\",\n    \"operator\": \"EQUALS\"\n  }\n]",
+    "raw_reasoning": "",
+    "error": null
+  },
+  {
+    "file_path": "../dataset/generated/merged/BL_02_NV_01.json",
+    "im_path": [
+      "./dummy_02_BL.jpg",
+      "./dummy_01_IV.jpg"
+    ],
+    "generated_clause": "++ ONE (1) B/L\nNOTIFY SAME AS CONSIGNEE\nMARKED 'FREIGHT PREPAID'\nMADE OUT TO ORDER OF ISSUING BANK ++ COMMERCIAL INVOICE DATED AND ISSUED BY ABC TEXTILE CO., LTD. AND SHOWING INVOICE NUMBER INV-2005-001 AND SHOWING COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS AND INDICATING H.S. CODE 6109.90, 6203.42, 6115.95 AND INDICATING TOTAL VALUE USD 4625.35",
+    "GT": [
+      {
+        "doc": "BL",
+        "key": "number_of_documents",
+        "expected_value": "ONE (1)",
+        "operator": "GTE"
+      },
+      {
+        "doc": "BL",
+        "key": "consignee",
+        "expected_value": "$LC_ISSUING_BANK",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party",
+        "expected_value": "SAME AS CONSIGNEE",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "freight_terms",
+        "expected_value": "FREIGHT PREPAID",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "IV",
+        "key": "exist_invoice_date",
+        "expected_value": true,
+        "operator": "EXISTS"
+      },
+      {
+        "doc": "IV",
+        "key": "exporter",
+        "expected_value": "ABC TEXTILE CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "invoice_number",
+        "expected_value": "INV-2005-001",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "goods_description",
+        "expected_value": "COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "IV",
+        "key": "hs_code",
+        "expected_value": "6109.90, 6203.42, 6115.95",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "IV",
+        "key": "currency",
+        "expected_value": "USD",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "total_amount",
+        "expected_value": "4625.35",
+        "operator": "LTE"
+      }
+    ],
+    "inference_result": [
+      {
+        "doc": "BL",
+        "key": "number_of_documents",
+        "expected_value": "ONE (1)",
+        "operator": "GTE"
+      },
+      {
+        "doc": "BL",
+        "key": "notify_party",
+        "expected_value": "SAME AS CONSIGNEE",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "BL",
+        "key": "freight_terms",
+        "expected_value": "FREIGHT PREPAID",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "BL",
+        "key": "consignee",
+        "expected_value": "$LC_ISSUING_BANK",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "exporter",
+        "expected_value": "ABC TEXTILE CO., LTD.",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "invoice_number",
+        "expected_value": "INV-2005-001",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "exist_invoice_number",
+        "expected_value": true,
+        "operator": "EXISTS"
+      },
+      {
+        "doc": "IV",
+        "key": "exist_invoice_date",
+        "expected_value": true,
+        "operator": "EXISTS"
+      },
+      {
+        "doc": "IV",
+        "key": "goods_description",
+        "expected_value": "COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "IV",
+        "key": "hs_code",
+        "expected_value": "6109.90, 6203.42, 6115.95",
+        "operator": "CONTAINS"
+      },
+      {
+        "doc": "IV",
+        "key": "currency",
+        "expected_value": "USD",
+        "operator": "EQUALS"
+      },
+      {
+        "doc": "IV",
+        "key": "total_amount",
+        "expected_value": "4625.35",
+        "operator": "LTE"
+      }
+    ],
+    "raw_response": "\n\n[\n  {\n    \"doc\": \"BL\",\n    \"key\": \"number_of_documents\",\n    \"expected_value\": \"ONE (1)\",\n    \"operator\": \"GTE\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"notify_party\",\n    \"expected_value\": \"SAME AS CONSIGNEE\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"freight_terms\",\n    \"expected_value\": \"FREIGHT PREPAID\",\n    \"operator\": \"CONTAINS\"\n  },\n  {\n    \"doc\": \"BL\",\n    \"key\": \"consignee\",\n    \"expected_value\": \"$LC_ISSUING_BANK\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"exporter\",\n    \"expected_value\": \"ABC TEXTILE CO., LTD.\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"invoice_number\",\n    \"expected_value\": \"INV-2005-001\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"exist_invoice_number\",\n    \"expected_value\": true,\n    \"operator\": \"EXISTS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"exist_invoice_date\",\n    \"expected_value\": true,\n    \"operator\": \"EXISTS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"goods_description\",\n    \"expected_value\": \"COTTON T-SHIRT, COTTON PANTS, COTTON SOCKS\",\n    \"operator\": \"CONTAINS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"hs_code\",\n    \"expected_value\": \"6109.90, 6203.42, 6115.95\",\n    \"operator\": \"CONTAINS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"currency\",\n    \"expected_value\": \"USD\",\n    \"operator\": \"EQUALS\"\n  },\n  {\n    \"doc\": \"IV\",\n    \"key\": \"total_amount\",\n    \"expected_value\": \"4625.35\",\n    \"operator\": \"LTE\"\n  }\n]",
+    "raw_reasoning": "",
+    "error": null
+  }
+]

@@ -1,0 +1,37 @@
+============================================================
+CLAUSE INFERENCE & EVALUATION SUMMARY
+============================================================
+Generated at: 2026-05-28 08:11:09
+
+📊 Overall Metrics
+  Total Files: 2
+  Total GT Fields: 22
+  Matched: 22
+  Mismatched: 0
+  Missing: 0
+  Extra: 2
+
+📈 Performance
+  Precision: 91.67%
+  Recall: 100.00%
+  F1-Score: 95.65%
+
+📋 Key-wise Statistics
+Key                          Match   Mismatch   Missing   Extra
+------------------------------------------------------------
+adverse_remarks                  0          0         0       1
+consignee                        2          0         0       0
+country_of_origin                1          0         0       0
+currency                         2          0         0       0
+date_of_issue                    1          0         0       0
+exist_invoice_date               2          0         0       0
+exist_invoice_number             0          0         0       1
+exporter                         2          0         0       0
+freight_terms                    2          0         0       0
+goods_description                1          0         0       0
+hs_code                          1          0         0       0
+invoice_number                   1          0         0       0
+notify_party                     2          0         0       0
+notify_party_address             1          0         0       0
+number_of_documents              2          0         0       0
+total_amount                     2          0         0       0
